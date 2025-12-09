@@ -1,7 +1,11 @@
 import fri.shapesge.Image;
 
+
+//Reprezentuje jedno políčko na hracom poli.
+
 public class Tile {
 
+    // Definivanie velkosti bloku.
     public static final int BLOCK_SIZE = 16;
 
     private int row;
@@ -13,6 +17,8 @@ public class Tile {
     private int adjacentMines;
 
     private Image image;
+
+    //Vytvorí nové poličko na danej pozícii.
 
     public Tile(int row, int column, int offsetX, int offsetY) {
         this.row = row;
@@ -30,30 +36,40 @@ public class Tile {
         this.image.makeVisible();
     }
 
+    //Nastaví políčko tak, aby obsahovalo mínu.
     public void placeMine() {
         this.hasMine = true;
     }
 
+    //Zvýši počet susedných min o 1.
     public void incrementAdjacentMines() {
         this.adjacentMines = this.adjacentMines + 1;
     }
 
+    //Skontroluje, či políčko obsahuje mínu.
     public boolean hasMine() {
         return this.hasMine;
     }
 
+    //Skontroluje, či je políčko odhalené.
     public boolean isRevealed() {
         return this.isRevealed;
     }
 
+    //Skontroluje či je políčko označené vlajkou.
     public boolean isFlagged() {
         return this.isFlagged;
     }
 
+    //Vráti počet susedných mín (0-8).
     public int getAdjacentMines() {
         return this.adjacentMines;
     }
 
+    /**
+     * Prepne stav vlajky (označí/odznačí políčko).
+     * Ak je políčko odhalené, neurobí nič.
+     */
     public void toggleFlag() {
         if (this.isRevealed) {
             return;
@@ -67,6 +83,10 @@ public class Tile {
         }
     }
 
+    /**
+     * Odhalí políčko, zmení jeho obrázok podľa obsahu (mína, číslo, prázdne).
+     * Ak je políčko už odhalené alebo označené, neurobí nič.
+     */
     public void reveal() {
         if (this.isRevealed || this.isFlagged) {
             return;
