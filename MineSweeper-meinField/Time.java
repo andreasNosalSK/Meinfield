@@ -14,7 +14,7 @@ public class Time {
     public Time(int offsetX, int offsetY) {
         this.seconds = 0;// Vytvorenie noveho TextBlocku s počiatočnym textom a umiestnenim
         this.text = new TextBlock("Time: 0", offsetX, offsetY);
-        this.text.changeColor("black"); // Zmena farby, ale možno by sa malo volať 'menitFarbu'
+        this.text.changeColor("white"); // Zmena farby, ale možno by sa malo volať 'menitFarbu'
         this.text.makeVisible();// Zobrazenie TextBlocku
     }
 

@@ -14,7 +14,7 @@ public class Score {
     public Score(int offsetX, int offsetY) {
         this.value = 0;
         this.text = new TextBlock("Score: 0", offsetX, offsetY);
-        this.text.changeColor("black");
+        this.text.changeColor("white");
         this.text.makeVisible();
     }
     //Zvyšuje aktuálne skóre o 1 a aktualizuje text
