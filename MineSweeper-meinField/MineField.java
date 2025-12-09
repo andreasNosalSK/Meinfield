@@ -37,7 +37,17 @@ public class MineField {
 
         this.offsetX = 50;
         this.offsetY = 100;
-        this.mineCount = (rows * cols) / 6;
+        
+        if (this.columns == 9 && this.columns == 9) {
+            this.mineCount = 10;
+        } else if (this.columns == 15 && this.columns == 15) {
+            this.mineCount = 34;
+        } else if (this.columns == 21 && this.columns == 16) {
+            this.mineCount = 60;
+        } else {
+            this.mineCount = (this.rows * this.columns) / 6;
+        }
+        
         this.initialized = false;
 
         this.tiles = new Tile[this.rows][this.columns];
