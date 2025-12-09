@@ -1,8 +1,22 @@
 import fri.shapesge.Image;
 
 
-//Reprezentuje jedno políčko na hracom poli.
-
+/**
+ * Trieda Tile reprezentuje jedno políčko/block na hracom poli hry Minesweeper.
+ *
+ * Každé políčko uchováva:
+ * svoju pozíciu (row, column),
+ * informáciu, či obsahuje mínu,
+ * či je odhalené,
+ * či je označené vlajkou,
+ * počet susedných mín (0–8),
+ * obrázok, ktorý sa má aktuálne zobraziť na hernej ploche.
+ *
+ * Trieda je zodpovedná za:
+ * - zmenu vzhľadu dlaždice podľa stavu,
+ * - prepínanie vlajky,
+ * - odhaľovanie políčka,
+ */
 public class Tile {
 
     // Definivanie velkosti bloku.
@@ -18,8 +32,22 @@ public class Tile {
 
     private Image image;
 
-    //Vytvorí nové poličko na danej pozícii.
-
+    /**
+     * Nové políčko na zadanej mriežkovej pozícii.
+     *
+     * Na začiatku je políčko:
+     * neodhalené,
+     * bez míny,
+     * bez vlajky,
+     * s hodnotou susedných mín = 0.
+     *
+     * Zobrazí sa základný obrázok zakrytého políčka (BLOCK).
+     *
+     * @param row riadok v hracej mriežke
+     * @param column stĺpec v hracej mriežke
+     * @param offsetX posun hracieho poľa v osi X
+     * @param offsetY posun hracieho poľa v osi Y
+     */
     public Tile(int row, int column, int offsetX, int offsetY) {
         this.row = row;
         this.column = column;
@@ -36,39 +64,42 @@ public class Tile {
         this.image.makeVisible();
     }
 
-    //Nastaví políčko tak, aby obsahovalo mínu.
+    /**
+     * Nastaví políčko tak, aby obsahovalo mínu.
+     */
     public void placeMine() {
         this.hasMine = true;
     }
 
-    //Zvýši počet susedných min o 1.
+    /**
+     * Zvýši počet susedných mín o 1.
+     */
     public void incrementAdjacentMines() {
         this.adjacentMines = this.adjacentMines + 1;
     }
 
-    //Skontroluje, či políčko obsahuje mínu.
+    /** @return true, ak políčko obsahuje mínu. */
     public boolean hasMine() {
         return this.hasMine;
     }
 
-    //Skontroluje, či je políčko odhalené.
+    /** @return true, ak je políčko už odhalené. */
     public boolean isRevealed() {
         return this.isRevealed;
     }
 
-    //Skontroluje či je políčko označené vlajkou.
+    /** @return true, ak je políčko označené vlajkou. */
     public boolean isFlagged() {
         return this.isFlagged;
     }
 
-    //Vráti počet susedných mín (0-8).
+    /** @return počet susedných mín (0–8). */
     public int getAdjacentMines() {
         return this.adjacentMines;
     }
 
     /**
-     * Prepne stav vlajky (označí/odznačí políčko).
-     * Ak je políčko odhalené, neurobí nič.
+     * Prepne stav vlajky na políčku.
      */
     public void toggleFlag() {
         if (this.isRevealed) {
@@ -84,8 +115,12 @@ public class Tile {
     }
 
     /**
-     * Odhalí políčko, zmení jeho obrázok podľa obsahu (mína, číslo, prázdne).
-     * Ak je políčko už odhalené alebo označené, neurobí nič.
+     * Odhalí políčko a zmení jeho vzhľad podľa stavu.
+     *
+     *
+     *  Ak je už je odhalene alebo vlajka, nestane sa nič.
+     *  Inač zobrazí podľa očakávaní.
+     * - ak má susedné míny → zobrazí príslušné číselo.
      */
     public void reveal() {
         if (this.isRevealed || this.isFlagged) {
@@ -104,6 +139,9 @@ public class Tile {
         }
     }
 
+    /**
+     * @return cesta k obrázku.
+     */
     private String getNumberImagePath() {
         switch (this.adjacentMines) {
             case 1:
