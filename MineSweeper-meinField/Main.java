@@ -40,16 +40,16 @@ public class Main {
 
         switch (option) {
             case 0:
-                this.gui = new GUI(10, 10);
+                this.gui = new GUI(9, 9);
                 break;
             case 1:
-                this.gui = new GUI(20, 20);
+                this.gui = new GUI(15, 15);
                 break;
             case 2:
-                this.gui = new GUI(25, 25);
+                this.gui = new GUI(21, 16);
                 break;
             default:
-                this.gui = new GUI(10, 10);
+                this.gui = new GUI(9, 9);
                 break;
         }
 
