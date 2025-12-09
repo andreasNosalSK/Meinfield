@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Score
+comment0.text=\r\nTrieda\ Score\ poskytuje\ zobrazovanie\ aktu\u00E1lneho\ sk\u00F3re\ pomocou\ objektu\ TextBlock\r\n
+comment1.params=offsetX\ offsetY
+comment1.target=Score(int,\ int)
+comment1.text=\r\n\ kon\u0161truktor\ pre\ objekt\ Score\r\n\ inicializuje\ hodnotu\ sk\u00F3re\ na\ 0\ a\ zobraz\u00ED\ textov\u00E9\ pole\ na\ dan\u00FDch\ suradniciach\r\n
+comment2.params=
+comment2.target=void\ addScore()
+comment3.params=
+comment3.target=void\ reset()
+comment4.params=
+comment4.target=void\ updateText()
+numComments=5

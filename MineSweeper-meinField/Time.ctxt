@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Time
+comment0.text=Trieda\ Time\ (\u010Cas)\ slu\u017Ei\ na\ sledovanie\ a\ zobrazovanie\ uplynuleho\ casu\r\nv\ hre\ (pravdepodobne\ v\ Minesweeperi,\ sudiac\ podla\ UML\ diagramu).\r\nVyu\u017Eiva\ komponent\ TextBlock\ z\ kni\u017Enice\ fri.shapesge\ na\ graficke\ zobrazenie.
+comment1.params=offsetX\ offsetY
+comment1.target=Time(int,\ int)
+comment1.text=Konstruktor\ triedy\ Time.\r\nNastavuje\ \u010Das\ na\ 0\ sekund\ a\ vytvori\ TextBlock\ na\ danych\ suradniciach.\r\n
+comment2.params=
+comment2.target=void\ reset()
+comment2.text=Resetuje\ cas\ hry\ na\ nulu.
+comment3.params=
+comment3.target=void\ increment()
+comment3.text=Zvy\u0161i\ aktualny\ po\u010Det\ sekund\ o\ 1\ (simuluje\ "tiknutie"\ hodin).
+comment4.params=
+comment4.target=void\ updateText()
+comment4.text=\r\nAktualizuje\ text\ v\ TextBlocku,\ aby\ zodpovedal\ aktualnej\ hodnote\ v\ poli\ 'seconds'.\r\n
+numComments=5

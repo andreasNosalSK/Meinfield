@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Tile
+comment1.params=row\ column\ offsetX\ offsetY
+comment1.target=Tile(int,\ int,\ int,\ int)
+comment10.params=
+comment10.target=java.lang.String\ getNumberImagePath()
+comment2.params=
+comment2.target=void\ placeMine()
+comment3.params=
+comment3.target=void\ incrementAdjacentMines()
+comment4.params=
+comment4.target=boolean\ hasMine()
+comment5.params=
+comment5.target=boolean\ isRevealed()
+comment6.params=
+comment6.target=boolean\ isFlagged()
+comment7.params=
+comment7.target=int\ getAdjacentMines()
+comment8.params=
+comment8.target=void\ toggleFlag()
+comment8.text=\r\n\ Prepne\ stav\ vlajky\ (ozna\u010D\u00ED/odzna\u010D\u00ED\ pol\u00ED\u010Dko).\r\n\ Ak\ je\ pol\u00ED\u010Dko\ odhalen\u00E9,\ neurob\u00ED\ ni\u010D.\r\n
+comment9.params=
+comment9.target=void\ reveal()
+comment9.text=\r\n\ Odhal\u00ED\ pol\u00ED\u010Dko,\ zmen\u00ED\ jeho\ obr\u00E1zok\ pod\u013Ea\ obsahu\ (m\u00EDna,\ \u010D\u00EDslo,\ pr\u00E1zdne).\r\n\ Ak\ je\ pol\u00ED\u010Dko\ u\u017E\ odhalen\u00E9\ alebo\ ozna\u010Den\u00E9,\ neurob\u00ED\ ni\u010D.\r\n
+numComments=11

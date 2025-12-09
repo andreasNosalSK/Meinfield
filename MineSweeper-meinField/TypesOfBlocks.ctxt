@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=TypesOfBlocks
+comment1.params=typeOfPicture
+comment1.target=TypesOfBlocks(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getPathOfPicture()
+numComments=3
